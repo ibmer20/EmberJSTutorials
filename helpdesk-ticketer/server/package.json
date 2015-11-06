@@ -1,0 +1,8 @@
+{
+  "name": "helpdesk-ticketer-server",
+  "description": "The server code for helpdesk ticketing system",
+  "dependencies": {
+    "express": "^4.13.3",
+    "socket.io": "^1.3.7"
+  }
+}

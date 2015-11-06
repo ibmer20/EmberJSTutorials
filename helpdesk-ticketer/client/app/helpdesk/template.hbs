@@ -1,0 +1,26 @@
+<header class="page-header">
+  <h1>Helpdesk Jobs</h1>
+</header>
+
+{{#each tickets as |ticket|}}
+  <section class="job">
+    <header>
+      <h2>{{ticket.name}}</h2>
+    </header>
+    <article>
+      <p>{{ticket.description}}</p>
+    </article>
+    <footer>
+        <p>
+          <strong>Created On</strong> {{ticket.createdAt}}
+        </p>
+    </footer>
+  </section>
+{{/each}}
+
+<form class="new-job" {{action "submitTicket" on="submit"}}>
+  <h2>Submit a Job</h2>
+  {{input placeholder="Your name" value=name}}
+  {{textarea placeholder="What's wrong?" value=description}}
+  <button type="submit">Submit Job</button>
+</form>
