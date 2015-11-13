@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  helpdesk: Ember.inject.service(),
   tickets: [],
 
   actions: {
@@ -21,5 +22,5 @@ export default Ember.Controller.extend({
     socket.on('ticket-submitted', (ticket) => {
       this.get('tickets').pushObject(ticket);
     });
-  }.on('init'),  
+  }.on('init'),
 });
